@@ -2,9 +2,8 @@ from flask import Flask, render_template, request
 
 from calculator import quadratic
 
+
 app = Flask(__name__)
-
-
 
 
 @app.route('/')
@@ -34,4 +33,3 @@ def calculate():
         else:
             return render_template('calculator_form.html', error=True)
     return render_template('calculator_form.html', error=None)
-
